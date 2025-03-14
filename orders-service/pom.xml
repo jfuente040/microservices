@@ -9,24 +9,10 @@
 		<version>1.0.1-SNAPSHOT</version>
 	</parent>
 
-	<groupId>com.jfuente</groupId>
 	<artifactId>orders-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>orders-service</name>
 	<description>Orders microservice</description>
-	<url/>
-	<licenses>
-		<license/>
-	</licenses>
-	<developers>
-		<developer/>
-	</developers>
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -42,6 +28,10 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webflux</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

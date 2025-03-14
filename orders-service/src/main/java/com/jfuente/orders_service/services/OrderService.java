@@ -25,7 +25,7 @@ public class OrderService {
         //Check for inventory stock and return a response with the result of the operation (true or false)
         BaseResponse result = this.webClientBuilder.build()
                 .post() //hago una petición post
-                .uri("http://localhost:8083/api/inventory/in-stock")
+                .uri("lb://inventory-service/api/inventory/in-stock")
                 .bodyValue(orderRequest.getOrderItems())//envio la lista de orderItems
                 .retrieve()//obtengo la respuesta
                 .bodyToMono(BaseResponse.class) //convierto la respuesta a un objeto BaseResponse

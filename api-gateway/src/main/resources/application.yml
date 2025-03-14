@@ -1,0 +1,20 @@
+#Inventory Service Routes
+spring:
+  cloud:
+    gateway:
+        default-filters:
+        - AddRequestHeader=proxied, true
+        routes:
+        - id: inventory-service
+          uri: lb://inventory-service
+          predicates:
+            - Path=/api/inventory/**
+            - Method=GET
+        - id: orders-service
+          uri: lb://orders-service
+          predicates:
+            - Path=/api/order/**
+        - id: products-service
+          uri: lb://products-service
+          predicates:
+            - Path=/api/product/**
